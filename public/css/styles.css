@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root{
+    font-size: 1em;
+    --back-color :#777;
+}
+
+*,*::after,*::before{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+    border: 0%;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--back-color);
+}
+table{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+table tr:nth-child(odd)
+{
+    background-color: black;
+    color : white;
+}
+table tr:first-child{
+    background-color: aquamarine;
+    color: brown;
+}
+h1{
+    text-align: center;
+    padding: 15px;
+    background-color: black;
+    color : white;
+}
+
+
+a{
+    font-size: 1.5rem;
+    padding: 15px;
+    border: 1px solid black;
+    margin-left: 30px;
+    text-decoration: none;
+    background-color: bisque;
+    color: black;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #000;
+}

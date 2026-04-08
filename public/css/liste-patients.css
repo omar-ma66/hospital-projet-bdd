@@ -1,0 +1,113 @@
+:root{
+    font-size: 1em;
+    --back-color :#777;
+}
+
+*,*::after,*::before{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+    border: 0%;
+}
+body{
+    background-color: var(--back-color);
+}
+table{
+    margin-top: 50px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+table tr:nth-child(odd)
+{
+    background-color: black;
+    color : white;
+}
+table tr:first-child{
+    background-color: aquamarine;
+    color: brown;
+}
+h1{
+    text-align: center;
+    padding: 15px;
+    background-color: black;
+    color : white;
+}
+
+input[type="date"]:invalid{
+    background-color: red;
+}
+
+
+input[type="text"]:invalid{
+    background-color: red;
+}
+
+
+input[type="tel"]:invalid{
+    background-color: red;
+}
+
+input[type="email"]:invalid{
+    background-color: red;
+}
+
+
+input[type="date"]:valid{
+    background-color: green;
+}
+
+
+input[type="text"]:valid{
+    background-color: green;
+}
+
+
+input[type="tel"]:valid{
+    background-color: green;
+}
+
+input[type="email"]:valid{
+    background-color: green;
+}
+
+
+
+span{
+    font-size: 1.5rem;
+    color:white;
+    background-color: blue;
+}
+
+form{
+    width: 600px;
+    margin: 50px auto;
+}
+form legend{
+    font-size: 1.5rem;
+}
+form label{
+    display: inline-block;
+    width: 120px;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+form input{
+    font-size: 1.5rem;
+    padding: 5px;
+}
+
+a{
+    font-size: 1.5rem;
+    padding: 15px;
+    border: 1px solid black;
+    margin-left: 30px;
+    text-decoration: none;
+    background-color: bisque;
+    color: black;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #000;
+}
