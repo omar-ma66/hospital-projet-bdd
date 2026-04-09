@@ -25,6 +25,7 @@ $idPatient = intval(htmlspecialchars($_POST["profile"]));
 <body>
     <h1>PDO Exercice profil-patient</h1>
     <a href="liste-patients">Liste patient</a>
+    <!-- <a href="liste-rendezvous.php">Liste RDV</a> -->
 
     <?php
 
