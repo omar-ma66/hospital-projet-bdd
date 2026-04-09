@@ -1,6 +1,8 @@
 <?php
 // terminer le code 
 session_start();
+
+
 ?>
 <!-- -------------------------------------------------------------------------------------------- -->
 <!DOCTYPE html>
@@ -11,9 +13,6 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liste RDV</title>
     <link rel="stylesheet" href="../css/liste-rendezvous.css" type="text/css">
-    <style>
-       
-    </style>
 </head>
 
 <body>
@@ -90,7 +89,7 @@ session_start();
     if ($idpatient && $datas) {
         // require("../../src/PDOConnect.php");
         // $idcon = PDOconnect("param", "hospitale2n");
-        $query = "SELECT id,datehour FROM appointments WHERE patient_id=:id_patient ";
+        $query = "SELECT datehour FROM appointments WHERE patient_id=:id_patient ";
         $reqprepare = $idcon->prepare($query);
         $dataPrepare = ["id_patient" => $idpatient];
         $reqprepare->execute($dataPrepare);
@@ -108,7 +107,7 @@ session_start();
     <?php if ($dataRdv && $row) : ?>
         <table>
             <tr>
-              <th>id</th>  <th>Date de vos RDV</th><th></th>
+                <th>Date de vos RDV</th>
             </tr>
 
             <?php foreach ($dataRdv as $rdv) : ?>
@@ -116,9 +115,7 @@ session_start();
                     <?php foreach ($rdv as $val) : ?>
                         <td><?= $val ?></td>
                     <?php endforeach; ?>
-                    <td><a style="display: inline;padding:1px" class="linksp" href="../bdd/delete.php?id=<?= $rdv[0] ?>">delete</a></td>
-                 
-                </tr>  
+                </tr>
             <?php endforeach; ?>
         </table>
     <?php endif; ?>
