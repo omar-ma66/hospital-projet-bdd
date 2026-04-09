@@ -22,9 +22,9 @@ $datas  = null;
     <h1>PDO Exercice Liste patients</h1>
 
 
-<!-- ----------------------------------------------------------------------------------------------- -->
+    <!-- ----------------------------------------------------------------------------------------------- -->
     <?php
-    require ("../../src/PDOconnect.php");
+    require("../../src/PDOconnect.php");
     $idcon = PDOconnect("param", "hospitale2n");
 
     $query = "SELECT * FROM patients";
@@ -44,25 +44,25 @@ $datas  = null;
     $idcon = null;
 
     ?>
-<!-- ----------------------------------------------------------------------------------------------- -->
+    <!-- ----------------------------------------------------------------------------------------------- -->
 
- <a href="../index.php">Acceuil</a>
- <a href="profil-patient.php">Profil-patient</a>
+    <a href="../index.php">Acceuil</a>
+    <a href="profil-patient.php">Profil-patient</a>
 
-<!-- ------------------------------------------------------------------------------------------ -->
- <form method="post" action="profil-patient.php">
-    <fieldset>
-        <legend>profil-patient</legend>
-        <label for="id_patient">ID patient</label>
-        <input type="number" id="id_patient" name="profile"> 
-        <input type="submit" value="INFO PROFIL">
-    </fieldset>
- </form>
-<!----------------------------------------------------------------------------------------------- -->
+    <!-- ------------------------------------------------------------------------------------------ -->
+    <form method="post" action="profil-patient.php">
+        <fieldset>
+            <legend>profil-patient</legend>
+            <label for="id_patient">ID patient</label>
+            <input type="number" id="id_patient" name="profile">
+            <input type="submit" value="INFO PROFIL">
+        </fieldset>
+    </form>
+    <!----------------------------------------------------------------------------------------------- -->
     <table>
         <tr>
             <?php foreach ($fields as $field) : ?>
-                <th><?= $field ?></th>                      
+                <th><?= $field ?></th>
             <?php endforeach; ?>
         </tr>
 
@@ -76,7 +76,7 @@ $datas  = null;
 
     </table>
 
-<!----------------------------------------------------------------------------------------------- -->
+    <!----------------------------------------------------------------------------------------------- -->
 </body>
 
 </html>

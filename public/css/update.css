@@ -1,20 +1,24 @@
-:root{
+:root {
     font-size: 1em;
-    --back-color :#777;
+    --back-color: #777;
 }
 
-*,*::after,*::before{
+*,
+*::after,
+*::before {
     box-sizing: border-box;
     padding: 0%;
     margin: 0%;
     border: 0%;
 }
-body{
+
+body {
     background-color: var(--back-color);
     width: 100vw;
     height: 100vh;
 }
-table{
+
+table {
     width: 100%;
     padding: 10px;
     border: 1px solid black;
@@ -22,86 +26,90 @@ table{
     font-size: 1.5rem;
 }
 
-table tr:nth-child(odd)
-{
+table tr:nth-child(odd) {
     background-color: black;
-    color : white;
+    color: white;
 }
-table tr:first-child{
+
+table tr:first-child {
     background-color: aquamarine;
     color: brown;
 }
-h1{
+
+h1 {
     text-align: center;
     padding: 15px;
     background-color: black;
-    color : white;
+    color: white;
 }
 
-input[type="date"]:invalid{
+input[type="date"]:invalid {
     background-color: red;
 }
 
 
-input[type="text"]:invalid{
+input[type="text"]:invalid {
     background-color: red;
 }
 
 
-input[type="tel"]:invalid{
+input[type="tel"]:invalid {
     background-color: red;
 }
 
-input[type="email"]:invalid{
+input[type="email"]:invalid {
     background-color: red;
 }
 
 
-input[type="date"]:valid{
+input[type="date"]:valid {
     background-color: green;
 }
 
 
-input[type="text"]:valid{
+input[type="text"]:valid {
     background-color: green;
 }
 
 
-input[type="tel"]:valid{
+input[type="tel"]:valid {
     background-color: green;
 }
 
-input[type="email"]:valid{
+input[type="email"]:valid {
     background-color: green;
 }
 
 
 
-span{
+span {
     font-size: 1.5rem;
-    color:white;
+    color: white;
     background-color: blue;
 }
 
-form{
+form {
     width: 600px;
     margin: 50px auto;
 }
-form legend{
+
+form legend {
     font-size: 1.5rem;
 }
-form label{
+
+form label {
     display: inline-block;
     width: 120px;
     padding: 10px;
     font-size: 1.5rem;
 }
-form input{
+
+form input {
     font-size: 1.5rem;
     padding: 5px;
 }
 
-a{
+a {
     font-size: 1.5rem;
     padding: 15px;
     border: 1px solid black;
@@ -112,11 +120,12 @@ a{
     border-radius: 5px;
     box-shadow: 5px 5px 5px #000;
 }
-.boite-alert{
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%,-50%);
+
+.boite-alert {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 600px;
     height: 200px;
     border: 1px solid black;
@@ -125,6 +134,6 @@ transform: translate(-50%,-50%);
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;   
-   
+    align-items: center;
+
 }

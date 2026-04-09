@@ -12,7 +12,7 @@ session_start();
     <title>Liste RDV</title>
     <link rel="stylesheet" href="../css/liste-rendezvous.css" type="text/css">
     <style>
-       
+
     </style>
 </head>
 
@@ -64,7 +64,7 @@ session_start();
     }
     ?>
     <!-- -------------------------------------------------------------------------------------------- -->
-   
+
     <?php if ($datas) : ?>
         <table>
             <tr>
@@ -108,7 +108,9 @@ session_start();
     <?php if ($dataRdv && $row) : ?>
         <table>
             <tr>
-              <th>id</th>  <th>Date de vos RDV</th><th></th>
+                <th>id</th>
+                <th>Date de vos RDV</th>
+                <th></th>
             </tr>
 
             <?php foreach ($dataRdv as $rdv) : ?>
@@ -117,8 +119,8 @@ session_start();
                         <td><?= $val ?></td>
                     <?php endforeach; ?>
                     <td><a style="display: inline;padding:1px" class="linksp" href="../bdd/delete.php?id=<?= $rdv[0] ?>">delete</a></td>
-                 
-                </tr>  
+
+                </tr>
             <?php endforeach; ?>
         </table>
     <?php endif; ?>

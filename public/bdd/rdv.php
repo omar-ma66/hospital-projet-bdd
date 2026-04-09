@@ -16,7 +16,7 @@ $idpatient = intval(htmlspecialchars($_POST['idpatient']));
 if ($_SESSION["idpatient"] !== $idpatient)
     header("location:../templates/ajout-rendezvous.php?server-erreur=id-probleme-noequal");
 
-$dateHourTmp = explode ('T',$_POST["datehour"]);
+$dateHourTmp = explode('T', $_POST["datehour"]);
 ?>
 
 <!DOCTYPE html>
@@ -33,26 +33,25 @@ $dateHourTmp = explode ('T',$_POST["datehour"]);
     <h1>PDO Exercice ajout RDV </h1>
     <a href="../index.php">Acceuil</a>
     <?php
-            require("../../src/PDOconnect.php");
-            $idcon = PDOconnect("param","hospitale2n");
-$datehour = $dateHourTmp[0]." ".$dateHourTmp[1]; 
-$query = "INSERT INTO appointments(datehour,patient_id)VALUES( :datehour ,:patient_id)";
-$reqpreparer = $idcon->prepare($query);
-$data = [
-        "datehour"=>$datehour,
-        "patient_id"=>$idpatient 
-        ];
-        $reqpreparer->execute($data);
-        $idcontrole = $idcon->lastInsertId();
-           if( $idcon->lastInsertId() === false ){ 
-            $idcon = null;
-            header("location:../templates/ajout-rendezvous.php?server-erreur=insert-erreur");
-            }
-           else{
-            $idcon = null ;
-            header("location:../templates/ajout-rendezvous.php?server-erreur=insert-ok=$idcontrole");
-           }
-             
+    require("../../src/PDOconnect.php");
+    $idcon = PDOconnect("param", "hospitale2n");
+    $datehour = $dateHourTmp[0] . " " . $dateHourTmp[1];
+    $query = "INSERT INTO appointments(datehour,patient_id)VALUES( :datehour ,:patient_id)";
+    $reqpreparer = $idcon->prepare($query);
+    $data = [
+        "datehour" => $datehour,
+        "patient_id" => $idpatient
+    ];
+    $reqpreparer->execute($data);
+    $idcontrole = $idcon->lastInsertId();
+    if ($idcon->lastInsertId() === false) {
+        $idcon = null;
+        header("location:../templates/ajout-rendezvous.php?server-erreur=insert-erreur");
+    } else {
+        $idcon = null;
+        header("location:../templates/ajout-rendezvous.php?server-erreur=insert-ok=$idcontrole");
+    }
+
     ?>
 
 </body>
