@@ -14,6 +14,7 @@ session_start();
 </head>
 <body>
     <h1>PDO Exercice Liste RDV</h1>
+    <a href="ajout-rendezvous.php">ajout rendez vous</a>
 
  <?php
     require("../../src/PDOConnect.php");

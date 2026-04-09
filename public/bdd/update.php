@@ -25,13 +25,12 @@ if(!isset($_POST["mail"]) || empty($_POST["mail"]))
 // if(!isset($_POST["datehour"]) || empty($_POST["datehour"]))
 //     header("location:../templates/profil-patients.php?serveur-erreur=datehour-erreur");
 
-$idpatient = htmlspecialchars($_POST["idpatient"]);
-$lastname = htmlspecialchars($_POST["lastname"]);
-$firstname = htmlspecialchars($_POST["firstname"]);
-$birthdate = htmlspecialchars($_POST["birthdate"]);
-$phone    = htmlspecialchars($_POST["phone"]);
-$mail     = htmlspecialchars($_POST["mail"]);
-
+$idpatient  = intval(htmlspecialchars($_POST["idpatient"]));
+$lastname   = htmlspecialchars($_POST["lastname"]);
+$firstname  = htmlspecialchars($_POST["firstname"]);
+$birthdate  = htmlspecialchars($_POST["birthdate"]);
+$phone      = htmlspecialchars($_POST["phone"]);
+$mail       = htmlspecialchars($_POST["mail"]);
 
 ?>
 
@@ -74,17 +73,17 @@ $data= [
                         }   
     $idcon = null;
 ?>
+
 <a href="../templates/profil-patient.php">Profil patient</a>
 <a href="../templates/liste-patients.php">Liste patients</a>
 <a href="ajouter.php">Ajouter patient</a>
 <a href="../index.php">Acceuil</a>
+
             <?php if($reponse) : ?>
-
-       <div class="boite-alert">
-        <span><?= $info ?></span>
-       </div>         
-
-            <?php endif;      ?>    
+                    <div class="boite-alert">
+                         <span><?= $info ?></span>
+                    </div>         
+            <?php endif;?>    
 
 
 </body>

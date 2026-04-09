@@ -30,9 +30,8 @@ $idPatient = intval(htmlspecialchars($_POST["profile"]));
 
     require("../../src/PDOconnect.php");
     $idcon = PDOconnect("param", "hospitale2n");
-    // $query = "SELECT patients.id,lastname,firstname,birthdate,phone,mail,datehour FROM patients,appointments where patients.id=$idPatient and appointments.patient_id=$idPatient";
-    $query = "SELECT * FROM patients,appointments where patients.id=$idPatient and appointments.patient_id=$idPatient";
-
+     $query = "SELECT patients.id,lastname,firstname,birthdate,phone,mail,datehour FROM patients,appointments where patients.id=$idPatient and appointments.patient_id=$idPatient";
+   // $query = "SELECT * FROM patients,appointments where patients.id=$idPatient and appointments.patient_id=$idPatient";
     $result = $idcon->query($query);
 
     if ($result->rowCount() === 0) {
@@ -64,6 +63,7 @@ $idPatient = intval(htmlspecialchars($_POST["profile"]));
         </table>
     <?php endif; ?>
 
+<!-- ----------------------------------------------------------------------------------------------- -->
 
     <form method="post" action="../bdd/update.php">
         <fieldset>
@@ -88,14 +88,13 @@ $idPatient = intval(htmlspecialchars($_POST["profile"]));
 
             <label for="id_datehour">datehour:</label>
             <input type="text" id="id_datehour" value="<?= $datas["datehour"] ?>" name="datehour" readonly> <br>
-        </fieldset>
-       
-            <fieldset>
+        </fieldset> 
+
+        <fieldset>
             <input type="submit" value="mise a jour">
         </fieldset>
-
-
     </form>
+<!-- ----------------------------------------------------------------------------------------------- -->
 
 </body>
 
